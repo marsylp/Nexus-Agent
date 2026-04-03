@@ -1,0 +1,14 @@
+.env.local
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.egg
+.DS_Store
+.hypothesis/
+agency-agents/
+~/.nexus-agent/
+test_report.md
+test_agent.py

@@ -1,0 +1,3 @@
+{"timestamp": "2026-03-31T15:46:28.452474Z", "run_id": "SEED_001", "file_path": "agent_core/mixins/__init__.py", "violation_type": "naming", "message": "命名规范违规：文件 '__init__.py' 在 mixins/ 目录下，应匹配正则 ^[a-z_]+_mixin\\.py$。请按照命名规范重命名文件。"}
+{"timestamp": "2026-03-31T15:46:28.521603Z", "run_id": "SEED_001", "file_path": "agent_core/harness/layer.py", "violation_type": "security", "message": "安全违规：检测到 eval() 使用。建议使用 JSON.parse() 或其他安全替代方案。"}
+{"timestamp": "2026-03-31T15:46:28.543132Z", "run_id": "SEED_001", "file_path": "agent_core/harness/verifier.py", "violation_type": "security", "message": "安全违规：检测到 eval() 使用。建议使用 JSON.parse() 或其他安全替代方案。"}

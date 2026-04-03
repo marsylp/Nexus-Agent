@@ -1,0 +1,45 @@
+{
+  "techStack": "python",
+  "srcDir": "agent_core",
+  "testRunner": "pytest",
+  "layers": [
+    "agent",
+    "harness",
+    "mixins",
+    "tools",
+    "llm"
+  ],
+  "naming": {
+    "harness": "^[a-z_]+\\.py$",
+    "mixins": "^[a-z_]+_mixin\\.py$"
+  },
+  "forbidden": [
+    {
+      "pattern": "print\\(.*password",
+      "message": "禁止打印密码",
+      "filePattern": "*.py"
+    },
+    {
+      "pattern": "import pdb",
+      "message": "禁止生产代码中使用 pdb",
+      "filePattern": "*.py"
+    }
+  ],
+  "security": {
+    "checkSecretLeak": true,
+    "checkEval": true,
+    "checkLocalStorage": true,
+    "checkUrlToken": true,
+    "checkXss": true
+  },
+  "i18n": {
+    "enabled": false,
+    "filePatterns": [],
+    "ignorePatterns": [
+      "console\\.log",
+      "//.*",
+      "<!--.*-->"
+    ]
+  },
+  "customConstraints": []
+}

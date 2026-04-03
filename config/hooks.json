@@ -1,0 +1,45 @@
+{
+  "_说明": "Hook 配置 ",
+  "hooks": [
+    {
+      "name": "任务完成提示",
+      "version": "1.0.0",
+      "description": "Agent 执行完成后打印提示",
+      "when": {
+        "type": "agentStop"
+      },
+      "then": {
+        "type": "askAgent",
+        "prompt": "回复完成"
+      },
+      "disabled": true
+    },
+    {
+      "name": "写操作审查",
+      "version": "1.0.0",
+      "description": "写操作前进行安全审查",
+      "when": {
+        "type": "preToolUse",
+        "toolTypes": ["write"]
+      },
+      "then": {
+        "type": "askAgent",
+        "prompt": "检查此写操作是否安全合理"
+      },
+      "disabled": true
+    },
+    {
+      "name": "任务完成后测试",
+      "version": "1.0.0",
+      "description": "Spec 任务完成后运行测试",
+      "when": {
+        "type": "postTaskExecution"
+      },
+      "then": {
+        "type": "runCommand",
+        "command": "echo 'Task completed'"
+      },
+      "disabled": true
+    }
+  ]
+}

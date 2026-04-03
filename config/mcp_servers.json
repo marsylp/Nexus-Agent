@@ -1,0 +1,4 @@
+{
+  "_说明": "MCP Server 配置。需要时添加，格式参考: https://github.com/modelcontextprotocol/servers",
+  "mcpServers": {}
+}
